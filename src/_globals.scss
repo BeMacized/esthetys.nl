@@ -1,0 +1,35 @@
+.typography-header {
+  font-family: 'Raleway', serif;
+}
+
+.typography-content {
+  font-family: 'Raleway', sans-serif;
+}
+
+// Small devices
+@mixin xs {
+  @media only screen and (max-width: 576px) {
+    @content;
+  }
+}
+
+// Medium devices
+@mixin sm {
+  @media only screen and (max-width: 768px) {
+    @content;
+  }
+}
+
+// Large devices
+@mixin md {
+  @media only screen and (max-width: 992px) {
+    @content;
+  }
+}
+
+// Extra large devices
+@mixin lg {
+  @media only screen and (max-width: 1200px) {
+    @content;
+  }
+}

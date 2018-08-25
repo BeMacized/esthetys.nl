@@ -1,0 +1,21 @@
+<div>
+  <est-pagewidth-container class="page-title" hGutter="true" vGutter="true">
+    <h1>Prijslijst</h1>
+  </est-pagewidth-container>
+</div>
+<div class="category-bg" *ngFor="let items of priceData">
+  <est-pagewidth-container class="category-title" hGutter="true" vGutter="true">
+    <h1>{{items[0].categorie}}</h1>
+  </est-pagewidth-container>
+  <est-pagewidth-container class="category-content" hGutter="true" vGutter="true">
+    <div class="price-item" *ngFor="let item of items">
+      <span class="title">{{item.naam}}</span>
+      <span class="price">{{item.vanaf ? 'vanaf ' : ''}}{{item.prijs}}{{item.icm ? ' icm handeling' : ''}}</span>
+    </div>
+  </est-pagewidth-container>
+</div>
+<div class="bg-date">
+  <est-pagewidth-container class="date-container" hGutter="true" vGutter="true">
+    <p>Prijslijst per {{date}}</p>
+  </est-pagewidth-container>
+</div>

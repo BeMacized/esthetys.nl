@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css?family=Average|Raleway');
+@import './globals';
+@import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+@import '../node_modules/font-awesome/css/font-awesome.min.css';
+@import '../node_modules/angular2-lightbox/lightbox.css';
+
+
+html, body {
+  padding: 0;
+  margin: 0;
+}
+
+h1, h2, h3, h4, h5 {
+  @extend .typography-header;
+}
+
+* {
+  @extend .typography-content;
+}
+
+/* unvisited link */
+a:link {
+  color: #88af0c;
+}
+
+/* visited link */
+a:visited {
+  color: #c1d77a;
+}
+
+/* mouse over link */
+a:hover {
+  color: #c4ff0f;
+}
+
+/* selected link */
+a:active {
+  color: #556d08;
+}

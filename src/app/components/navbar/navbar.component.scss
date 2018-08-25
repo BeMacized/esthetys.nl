@@ -1,0 +1,143 @@
+@import '../../../globals';
+
+$height: 64px;
+
+.navbar-bg {
+  height: $height;
+  position: relative;
+  width: 100%;
+  background-color: #000;
+}
+
+.navbar-content {
+  height: $height;
+  color: #fff;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0 10px;
+  width: calc(100vw - 20px);
+  position: relative;
+
+  @include sm {
+    justify-content: center;
+  }
+}
+
+.navbar-logo {
+  //font-size: 24px;
+  //@extend .typography-header;
+  height: $height;
+  width: 256px;
+  overflow: hidden;
+  position: relative;
+
+  img {
+    position: absolute;
+    height: 112px;
+    left: 0;
+    top: -20px;
+  }
+}
+
+.navbar-spacer {
+  flex: 1 1 auto;
+
+  @include sm {
+    flex: 0;
+  }
+}
+
+.collapse-button {
+  display: none;
+  position: absolute;
+  right: 6px;
+  top: 16px;
+  height: 32px;
+  width: 48px;
+  color: #FFF;
+  background: none;
+  border: 1px solid #FFF;
+
+  @include sm {
+    display: block;
+  }
+}
+
+.navbar-items {
+  padding: 0;
+  margin: 0;
+  white-space: nowrap;
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  transition: all 0s;
+
+  @include sm {
+    flex-direction: column;
+    position: absolute;
+    width: 100vw;
+    top: 64px;
+    left: -10px;
+    z-index: 100;
+    background-color: #000;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    transform: translateY(0);
+    opacity: 1;
+
+    &.collapsed {
+      transform: translateY(calc(-100% - 64px));
+      opacity: 0;
+    }
+
+    & > li {
+    }
+  }
+
+  & > li {
+    height: $height;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10px;
+    position: relative;
+    transition: all 0.25s ease;
+
+    &:after {
+      position: absolute;
+      display: block;
+      content: '';
+      height: 0px;
+      width: 100%;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #88af0c;
+      transition: height .25s ease;
+    }
+
+    &:hover {
+      cursor: pointer;
+      background-color: rgba(255, 255, 255, 0.2);
+      color: #88af0c;
+
+      &:after {
+        position: absolute;
+        display: block;
+        content: '';
+        height: 8px;
+        width: 100%;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: transparentize(#88af0c, .25);
+      }
+    }
+    &.active {
+      &:after {
+        height: 8px;
+      }
+    }
+  }
+
+}

@@ -1,0 +1,19 @@
+<div class="navbar-bg">
+  <est-pagewidth-container class="navbar-content">
+    <div class="navbar-logo">
+      <img src="../../../assets/logos/ESTHETYS_LARGE_LIGHT.png"/>
+    </div>
+    <span class="navbar-spacer"></span>
+    <button class="collapse-button" (click)="toggleNav()">
+      <i class="fa fa-bars" aria-hidden="true"></i>
+    </button>
+    <ul class="navbar-items" [ngClass]="{collapsed: collapsed}">
+      <li href="/" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Home</li>
+      <li href="/" routerLink="/behandelingen" routerLinkActive="active">Behandelingen</li>
+      <li href="/" routerLink="/produkten" routerLinkActive="active">Produkten</li>
+      <li href="/" routerLink="/cadeaubon" routerLinkActive="active">Cadeaubon</li>
+      <li href="/" routerLink="/prijslijst" routerLinkActive="active">Prijslijst</li>
+      <li href="/" routerLink="/contact" routerLinkActive="active">Contact</li>
+    </ul>
+  </est-pagewidth-container>
+</div>

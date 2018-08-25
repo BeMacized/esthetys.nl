@@ -1,0 +1,14 @@
+:host {
+  max-width: 1200px;
+  width: 100vw;
+  margin: 0 auto;
+  display: block;
+  &.v-gutter {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  &.h-gutter {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}

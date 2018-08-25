@@ -1,0 +1,83 @@
+@import '../../../globals';
+
+.home-row-bg {
+  background-color: #556d08;
+  color: #FFF;
+}
+
+.home-row-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.about-row-bg {
+
+}
+
+.about-row-content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  & > div {
+    flex: 1 1 50%;
+    padding: 20px;
+    @include sm() {
+      flex: 1 1 100%
+    }
+  }
+}
+
+.products-row-bg {
+  background-color: #556d08;
+  color: #FFF;
+}
+
+.products-row-content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  & > div {
+    flex: 1 1 50%;
+    padding: 20px;
+    @include sm() {
+      flex: 1 1 100%
+    }
+  }
+}
+
+.salon-row-bg {
+  background-color: #000;
+  color: #FFF;
+}
+
+.salon-row-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  .salon-row-images {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    & > * {
+      width: calc(25% - 40px);
+      margin: 20px;
+      @include md() {
+        width: calc(50% - 40px);
+      }
+      @include sm() {
+        width: calc(100% - 40px);
+      }
+    }
+  }
+}
+

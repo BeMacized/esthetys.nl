@@ -4,7 +4,7 @@ import {RouterModule, Routes} from '@angular/router';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {FlexLayoutModule} from '@angular/flex-layout';
 import {NavbarComponent} from './components/navbar/navbar.component';
-import {LightboxModule} from 'angular2-lightbox';
+import {LightboxModule} from 'ngx-lightbox';
 
 
 import {AppComponent} from './components/app/app.component';
@@ -54,7 +54,7 @@ const routes: Routes = [
     RouterModule.forRoot(routes, {}),
     BrowserModule,
     FlexLayoutModule,
-    NgbModule.forRoot(),
+    NgbModule,
     LightboxModule,
     FormsModule,
     ReactiveFormsModule,

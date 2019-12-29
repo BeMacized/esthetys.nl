@@ -1,6 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {Lightbox} from 'angular2-lightbox';
-
+import { Lightbox } from 'ngx-lightbox';
 
 @Component({
   selector: 'est-lightbox-image',

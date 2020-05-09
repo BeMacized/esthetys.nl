@@ -1,71 +1,76 @@
 @import '../../../../globals';
 
 ngb-carousel {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 500px;
-  overflow: hidden;
-
-  img {
-    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 500px;
-    object-fit: cover;
-  }
+    overflow: hidden;
 
-  @include md {
-    &, img {
-      height: 400px;
+    img {
+        width: 100%;
+        height: 500px;
+        object-fit: cover;
     }
-  }
 
-  @include sm {
-    &, img {
-      height: 300px;
+    @include md {
+        &,
+        img {
+            height: 400px;
+        }
     }
-  }
 
-  @include xs {
-    &, img {
-      height: calc(100vh - 64px);
+    @include sm {
+        &,
+        img {
+            height: 300px;
+        }
     }
-  }
+
+    @include xs {
+        &,
+        img {
+            height: calc(100vh - 64px);
+        }
+    }
 }
 
 .carousel-inner {
-  overflow: visible;
+    overflow: visible;
 }
 
 .carousel-item {
-  display: flex !important;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 1.2s ease-in-out, visibility 1.2s;
-  z-index: -1;
-  position: absolute;
+    display: flex !important;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1.2s ease-in-out, visibility 1.2s;
+    z-index: -1;
+    position: absolute;
 
-  &.active {
-    opacity: 1;
-    visibility: visible;
-    z-index: 10;
-  }
+    &.active {
+        opacity: 1;
+        visibility: visible;
+        z-index: 10;
+    }
 }
 
-.carousel-control-prev, .carousel-control-next, .carousel-indicators {
-  z-index: 20;
+.carousel-control-prev,
+.carousel-control-next,
+.carousel-indicators {
+    z-index: 20;
 }
 
 .carousel-logo {
-  position: absolute;
-  z-index: 20;
-  width: 70vw;
-  margin: auto;
-  overflow: hidden;
+    position: absolute;
+    z-index: 20;
+    width: 70vw;
+    margin: auto;
+    overflow: hidden;
 
-  img {
-    min-width: 100px;
-    max-width: 80vw;
-    object-fit: cover;
-    display: none;
-  }
+    img {
+        min-width: 100px;
+        max-width: 80vw;
+        object-fit: cover;
+        display: none;
+    }
 }

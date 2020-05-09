@@ -1,69 +1,70 @@
 @import '../../../globals';
 
 .category-bg {
-  &:nth-child(3n+0) {
-    color: #FFF;
-    background-color: #556d08;
-    .price-item {
-      background-color: rgba(255, 255, 255, 0.25);
+    &:nth-child(3n + 0) {
+        color: #fff;
+        background-color: #556d08;
+        .price-item {
+            background-color: rgba(255, 255, 255, 0.25);
+        }
     }
-  }
-  &:nth-child(3n+2) {
-    color: #FFF;
-    background-color: #000;
-    .price-item {
-      background-color: rgba(255, 255, 255, 0.15);
+    &:nth-child(3n + 2) {
+        color: #fff;
+        background-color: #000;
+        .price-item {
+            background-color: rgba(255, 255, 255, 0.15);
+        }
     }
-  }
 }
 
-.category-title, .page-title {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  * {
-    margin: 0;
-    padding: 0;
-  }
+.category-title,
+.page-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    * {
+        margin: 0;
+        padding: 0;
+    }
 }
 
 .category-content {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  & > div {
-    flex: 1 1 calc(50% - 40px);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    & > div {
+        flex: 1 1 calc(50% - 40px);
 
-    @include sm() {
-      flex: 1 1 calc(100% - 40px);
+        @include sm() {
+            flex: 1 1 calc(100% - 40px);
+        }
     }
-  }
 }
 
 .price-item {
-  background-color: #556d08;
-  color: #FFF;
-  margin: 20px;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  font-size: 24px;
-  text-align: center;
-  .price {
-    border-top: 1px white solid;
-    margin-top: 5px;
-  }
+    background-color: #556d08;
+    color: #fff;
+    margin: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    font-size: 24px;
+    text-align: center;
+    .price {
+        border-top: 1px white solid;
+        margin-top: 5px;
+    }
 }
 
 .bg-date {
-  background-color: #000;
-  color: #FFF;
+    background-color: #000;
+    color: #fff;
 }
 .date-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }

@@ -1,80 +1,78 @@
 @import '../../../globals';
 
 * {
-  word-wrap: break-word;
-  overflow-wrap: break-word;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 .header-row-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
 .gezichts-row-bg {
-  color: #FFF;
-  background-color: #556d08;
+    color: #fff;
+    background-color: #556d08;
 
-  .treatment-item {
-    background-color: rgba(255, 255, 255, 0.25);
-  }
+    .treatment-item {
+        background-color: rgba(255, 255, 255, 0.25);
+    }
 }
 
 .gezichtsuitbereidingen-row-bg {
-  color: #FFF;
-  background-color: #000;
+    color: #fff;
+    background-color: #000;
 
-  .treatment-item {
-    background-color: rgba(255, 255, 255, 0.15);
-  }
+    .treatment-item {
+        background-color: rgba(255, 255, 255, 0.15);
+    }
 }
 
 .diversen-row-bg {
-  color: #000;
+    color: #000;
 
-  .treatment-item {
-    color: #FFF;
-    background-color: #556d08;
-  }
+    .treatment-item {
+        color: #fff;
+        background-color: #556d08;
+    }
 }
 
 .treatment-row-title h1 {
-  text-align: center;
+    text-align: center;
 }
 
 .treatment-row-content {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  //align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    //align-items: center;
 
-  & > div {
-    flex: 1 1 calc(50% - 40px);
+    & > div {
+        flex: 1 1 calc(50% - 40px);
 
-    @include sm() {
-      flex: 1 1 calc(100% - 40px);
+        @include sm() {
+            flex: 1 1 calc(100% - 40px);
+        }
     }
-  }
 }
 
 .treatment-item {
-  margin: 20px;
+    margin: 20px;
 }
 
 .treatment-item-img {
-  width: 100%;
+    width: 100%;
 }
 
 .treatment-item-content {
-  padding: 20px;
+    padding: 20px;
 }
 
 .treatment-item-title {
-
 }
 
 .treatment-item-time {
-
 }

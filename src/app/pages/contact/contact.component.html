@@ -1,46 +1,47 @@
 <div class="map-row">
-  <iframe
-    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2905.9146609832183!2d5.193877557536213!3d52.23297114408152!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x1b7b75e63545f3e1!2sSchoonheidssalon+Esthetys!5e0!3m2!1sen!2snl!4v1513443243507"
-    frameborder="0"
-  ></iframe>
+    <iframe
+        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2905.9146609832183!2d5.193877557536213!3d52.23297114408152!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x1b7b75e63545f3e1!2sSchoonheidssalon+Esthetys!5e0!3m2!1sen!2snl!4v1513443243507"
+        frameborder="0"
+    ></iframe>
 </div>
 <div class="contact-row-bg">
-  <est-pagewidth-container class="contact-row-content" hGutter="true" vGutter="true">
-    <div>
-      <h1>Contact</h1>
-      <p>
-        Wij zijn te bereiken via de telefoon, of e-mail.<br/>
-        Geopend op maandag, woensdag en vrijdag.<br/>
-        <b>Tel.</b>&nbsp;035 - 6830 510<br/>
-        <b>Email:</b>&nbsp;<a href="mailto:info@esthetys.nl">info@esthetys.nl</a><br/>
-        <br/>
-        <b>Adres</b><br/>
-        Kometenstraat 117<br/>
-        1223CJ Hilversum<br/>
-      </p>
-      <div class="streetview">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!4v1513447963685!6m8!1m7!1snh_7ndoyde6L2gI7JgsEVQ!2m2!1d52.23275636634386!2d5.196024973986951!3f327!4f0!5f0.7820865974627469"
-          frameborder="0" allowfullscreen></iframe>
-      </div>
-    </div>
-    <div>
-      <h1>Contact Formulier</h1>
-      <form #f="ngForm"class="contact-form" (submit)="onSubmit(f)" ngNativeValidate>
-        <label for="name">Naam</label>
-        <input type="text" id="name" name="name" placeholder="Uw naam..." required="" ngModel>
-        <label for="email">Email</label>
-        <input type="text" id="email" name="_replyto" placeholder="Uw email adres..." required ngModel>
-        <label for="phone">Telefoon Nr.</label>
-        <input type="text" id="phone" name="phone" placeholder="Uw telefoon nummer..." ngModel>
-        <label for="message">Bericht</label>
-        <textarea id="message" name="message" placeholder="Uw bericht..." required ngModel></textarea>
-        <input type="submit" value="Stuur Bericht">
-      </form>
-    </div>
-  </est-pagewidth-container>
+    <est-pagewidth-container class="contact-row-content" hGutter="true" vGutter="true">
+        <div>
+            <h1>Contact</h1>
+            <p>
+                Wij zijn te bereiken via de telefoon, of e-mail.<br />
+                Geopend op maandag, woensdag en vrijdag.<br />
+                <b>Tel.</b>&nbsp;035 - 6830 510<br />
+                <b>Email:</b>&nbsp;<a href="mailto:info@esthetys.nl">info@esthetys.nl</a><br />
+                <br />
+                <b>Adres</b><br />
+                Kometenstraat 117<br />
+                1223CJ Hilversum<br />
+            </p>
+            <div class="streetview">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!4v1513447963685!6m8!1m7!1snh_7ndoyde6L2gI7JgsEVQ!2m2!1d52.23275636634386!2d5.196024973986951!3f327!4f0!5f0.7820865974627469"
+                    frameborder="0"
+                    allowfullscreen
+                ></iframe>
+            </div>
+        </div>
+        <div>
+            <h1>Contact Formulier</h1>
+            <form #f="ngForm" class="contact-form" (submit)="onSubmit(f)" ngNativeValidate>
+                <label for="name">Naam</label>
+                <input type="text" id="name" name="name" placeholder="Uw naam..." required="" ngModel />
+                <label for="email">Email</label>
+                <input type="text" id="email" name="_replyto" placeholder="Uw email adres..." required ngModel />
+                <label for="phone">Telefoon Nr.</label>
+                <input type="text" id="phone" name="phone" placeholder="Uw telefoon nummer..." ngModel />
+                <label for="message">Bericht</label>
+                <textarea id="message" name="message" placeholder="Uw bericht..." required ngModel></textarea>
+                <input type="submit" value="Stuur Bericht" />
+            </form>
+        </div>
+    </est-pagewidth-container>
 </div>
 <div class="contact-row-bg">
-  <est-pagewidth-container class="contact-row-content" hGutter="true" vGutter="true">
-  </est-pagewidth-container>
+    <est-pagewidth-container class="contact-row-content" hGutter="true" vGutter="true"> </est-pagewidth-container>
 </div>

@@ -1,28 +1,26 @@
-import {Component, Input, OnInit} from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Lightbox } from 'ngx-lightbox';
 
 @Component({
-  selector: 'est-lightbox-image',
-  templateUrl: './lightbox-image.component.html',
-  styleUrls: ['./lightbox-image.component.scss']
+    selector: 'est-lightbox-image',
+    templateUrl: './lightbox-image.component.html',
+    styleUrls: ['./lightbox-image.component.scss'],
 })
 export class LightboxImageComponent implements OnInit {
+    @Input() src: string;
+    @Input() caption: string;
 
-  @Input() src: string;
-  @Input() caption: string;
+    constructor(private lightbox: Lightbox) {}
 
-  constructor(private lightbox: Lightbox) {
-  }
+    ngOnInit() {}
 
-  ngOnInit() {
-  }
-
-  openLightbox(): void {
-    this.lightbox.open([{
-      src: this.src,
-      caption: this.caption,
-      thumb: this.src
-    }]);
-  }
-
+    openLightbox(): void {
+        this.lightbox.open([
+            {
+                src: this.src,
+                caption: this.caption,
+                thumb: this.src,
+            },
+        ]);
+    }
 }

@@ -1,0 +1,7 @@
+package-lock.json
+dist
+.angulardoc.json
+.vscode/*
+lib
+projects/microtask-platform-web-client/src/assets/appsettings.template.json
+projects/microtask-platform-web-client/mapdata/pcmap_data.json

@@ -20,8 +20,7 @@ export class CovidOverlayComponent implements OnInit {
 
     @HostListener('document:click', ['$event'])
     clickOutside($event: MouseEvent) {
-        console.log('CLICK', $event.target, this.elementRef.nativeElement.contains($event.target));
-        if (!this.elementRef.nativeElement.contains($event.target)) {
+        if ($event.target === this.elementRef.nativeElement) {
             $event.stopImmediatePropagation();
             this.close();
         }

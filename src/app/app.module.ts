@@ -13,7 +13,6 @@ import { HomeSliderComponent } from './pages/home/home-slider/home-slider.compon
 import { FooterComponent } from './components/footer/footer.component';
 import { LightboxImageComponent } from './components/lightbox-image/lightbox-image.component';
 import { BehandelingenComponent } from './pages/behandelingen/behandelingen.component';
-import { ProduktenComponent } from './pages/produkten/produkten.component';
 import { CadeaubonComponent } from './pages/cadeaubon/cadeaubon.component';
 import { PrijslijstComponent } from './pages/prijslijst/prijslijst.component';
 import { ContactComponent } from './pages/contact/contact.component';
@@ -23,11 +22,12 @@ import { SimpleNotificationsModule } from 'angular2-notifications';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { CovidOverlayComponent } from './components/covid-overlay/covid-overlay.component';
+import { MerkenComponent } from './pages/merken/merken.component';
 
 const routes: Routes = [
     { path: '', component: HomeComponent },
     { path: 'behandelingen', component: BehandelingenComponent },
-    { path: 'produkten', component: ProduktenComponent },
+    { path: 'merken', component: MerkenComponent },
     { path: 'cadeaubon', component: CadeaubonComponent },
     { path: 'contact', component: ContactComponent },
     { path: 'prijslijst', component: PrijslijstComponent },
@@ -45,7 +45,7 @@ const routes: Routes = [
         FooterComponent,
         LightboxImageComponent,
         BehandelingenComponent,
-        ProduktenComponent,
+        MerkenComponent,
         CadeaubonComponent,
         PrijslijstComponent,
         ContactComponent,

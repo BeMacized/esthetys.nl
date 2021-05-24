@@ -14,7 +14,7 @@ export class ContactComponent implements OnInit {
 
     onSubmit(form) {
         this.http
-            .post('https://formspree.io/info@esthetys.nl', form.value, {
+            .post('https://formspree.io/f/mbjpvolb', form.value, {
                 headers: new HttpHeaders().set('Accept', 'application/json'),
             })
             .subscribe(

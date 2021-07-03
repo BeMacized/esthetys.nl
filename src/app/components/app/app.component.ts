@@ -17,12 +17,12 @@ export class AppComponent implements OnInit {
     constructor(private domService: DomService) {}
 
     ngOnInit() {
-        // const component = this.domService.appendComponentTo<CovidOverlayComponent>(
-        //     'overlay-container',
-        //     CovidOverlayComponent,
-        //     {
-        //         close: () => component.remove(),
-        //     }
-        // );
+        const component = this.domService.appendComponentTo<CovidOverlayComponent>(
+            'overlay-container',
+            CovidOverlayComponent,
+            {
+                close: () => component.remove(),
+            }
+        );
     }
 }

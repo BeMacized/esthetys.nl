@@ -40,16 +40,31 @@ export class PrijslijstComponent implements OnInit {
             const priceData = [];
             for (let i = 3; i <= rows; i++) {
                 priceData.push({
-                    categorie: sheet['A' + i] && sheet['A' + i].w,
-                    naam: sheet['B' + i] && sheet['B' + i].w,
-                    prijs: Price.format('nl-NL', 'EUR', sheet['C' + i] && sheet['C' + i].w),
-                    vanaf: sheet['D' + i] && sheet['D' + i].w === 'Y',
-                    icm: sheet['E' + i] && sheet['E' + i].w === 'Y',
+                    categorie: sheet['A' + i]?.w,
+                    naam: sheet['B' + i]?.w,
+                    prijs: this.formatPrice(sheet['C' + i]?.w),
+                    vanaf: sheet['D' + i]?.w === 'Y',
+                    icm: sheet['E' + i]?.w === 'Y',
                 });
             }
             this.priceData = Object.values(groupBy(priceData, 'categorie'));
             this.date = sheet.B1.w;
         }.bind(this);
         oReq.send();
+    }
+
+    formatPrice(price: any) {
+        const parsedFloat = parseFloat(price);
+        if (!isNaN(parsedFloat)) {
+            price = parsedFloat;
+        }
+        switch (typeof price) {
+            case 'number':
+                return Price.format('nl-NL', 'EUR', price);
+            case 'string':
+                return price;
+            default:
+                return 'Incorrecte prijs';
+        }
     }
 }

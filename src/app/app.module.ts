@@ -64,7 +64,6 @@ const routes: Routes = [
         SimpleNotificationsModule.forRoot(),
     ],
     providers: [],
-    bootstrap: [AppComponent],
-    entryComponents: [CovidOverlayComponent],
+    bootstrap: [AppComponent]
 })
 export class AppModule {}

@@ -97,7 +97,6 @@
             }
         }
     },
-    "defaultProject": "esthetys-angular",
     "schematics": {
         "@schematics/angular:component": {
             "prefix": "est",

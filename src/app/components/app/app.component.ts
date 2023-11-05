@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DomService } from '../../services/dom.service';
-import { CovidOverlayComponent } from '../covid-overlay/covid-overlay.component';
+import { Options } from 'angular2-notifications';
+import { NotificationAnimationType } from 'angular2-notifications';
 
 @Component({
     selector: 'est-root',
@@ -8,10 +9,10 @@ import { CovidOverlayComponent } from '../covid-overlay/covid-overlay.component'
     styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements OnInit {
-    notificationOptions = {
+    notificationOptions: Options = {
         position: ['top', 'center'],
         timeOut: 3000,
-        animate: 'fromTop',
+        animate: NotificationAnimationType.FromTop,
     };
 
     constructor(private domService: DomService) {}

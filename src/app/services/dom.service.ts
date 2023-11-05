@@ -28,34 +28,37 @@ export class DomService {
         const domComponent = new DomComponent<C>(componentRef, this.appRef);
         // Attach fields to the component
         fields = Object.assign({}, fields, { __DOM_COMPONENT: domComponent });
-        for (const key of Object.keys(fields)) componentRef.instance[key] = fields[key];
+        for (const key of Object.keys(fields)) (componentRef!.instance as any)[key] = fields[key];
         // Attach component to the appRef so that it's inside the ng component tree
         this.appRef.attachView(componentRef.hostView);
         // Get DOM element from component
         const childDomElem = (componentRef.hostView as EmbeddedViewRef<any>).rootNodes[0] as HTMLElement;
         // Append DOM element to the body
-        document.getElementById(parentId).appendChild(childDomElem);
+        document.getElementById(parentId)!.appendChild(childDomElem);
         // Return as DomComponent
         return domComponent;
     }
 }
 
 export class DomComponent<C> {
-    private onRemove: () => void;
+    private onRemove?: () => void;
 
-    constructor(private componentRef: ComponentRef<C>, private appRef: ApplicationRef) {}
+    constructor(
+        private componentRef?: ComponentRef<C>,
+        private appRef?: ApplicationRef
+    ) {}
 
     get component(): C {
-        return this.componentRef.instance;
+        return this.componentRef!.instance;
     }
 
     remove() {
         if (this.componentRef) {
-            this.appRef.detachView(this.componentRef.hostView);
+            this.appRef!.detachView(this.componentRef.hostView);
             this.componentRef.destroy();
-            this.componentRef = null;
+            this.componentRef = undefined;
             if (this.onRemove) this.onRemove();
-            this.onRemove = null;
+            this.onRemove = undefined;
         }
     }
 

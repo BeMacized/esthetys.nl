@@ -8,11 +8,14 @@ import { NotificationsService } from 'angular2-notifications';
     styleUrls: ['./contact.component.scss'],
 })
 export class ContactComponent implements OnInit {
-    constructor(private http: HttpClient, private notifications: NotificationsService) {}
+    constructor(
+        private http: HttpClient,
+        private notifications: NotificationsService
+    ) {}
 
     ngOnInit() {}
 
-    onSubmit(form) {
+    onSubmit(form: any) {
         this.http
             .post('https://formspree.io/f/mbjpvolb', form.value, {
                 headers: new HttpHeaders().set('Accept', 'application/json'),

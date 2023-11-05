@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import * as XLSX from 'xlsx';
 import { groupBy } from 'lodash';
-import * as Price from 'format-price';
 
 @Component({
     selector: 'est-prijslijst',
@@ -9,8 +8,8 @@ import * as Price from 'format-price';
     styleUrls: ['./prijslijst.component.scss'],
 })
 export class PrijslijstComponent implements OnInit {
-    priceData;
-    date;
+    protected priceData: any;
+    protected date: any;
 
     constructor() {}
 
@@ -22,7 +21,7 @@ export class PrijslijstComponent implements OnInit {
         const oReq = new XMLHttpRequest();
         oReq.open('GET', url, true);
         oReq.responseType = 'arraybuffer';
-        oReq.onload = function () {
+        oReq.onload = () => {
             const arraybuffer = oReq.response;
             const data = new Uint8Array(arraybuffer);
             const arr = [];
@@ -48,8 +47,8 @@ export class PrijslijstComponent implements OnInit {
                 });
             }
             this.priceData = Object.values(groupBy(priceData, 'categorie'));
-            this.date = sheet.B1.w;
-        }.bind(this);
+            this.date = sheet['B1'].w;
+        };
         oReq.send();
     }
 
@@ -60,7 +59,7 @@ export class PrijslijstComponent implements OnInit {
         }
         switch (typeof price) {
             case 'number':
-                return Price.format('nl-NL', 'EUR', price);
+                return new Intl.NumberFormat('nl-NL', { style: 'currency', currency: 'EUR' }).format(price);
             case 'string':
                 return price;
             default:

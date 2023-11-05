@@ -7,8 +7,8 @@ import { Lightbox } from 'ngx-lightbox';
     styleUrls: ['./lightbox-image.component.scss'],
 })
 export class LightboxImageComponent implements OnInit {
-    @Input() src: string;
-    @Input() caption: string;
+    @Input() src?: string;
+    @Input() caption?: string;
 
     constructor(private lightbox: Lightbox) {}
 
@@ -17,9 +17,9 @@ export class LightboxImageComponent implements OnInit {
     openLightbox(): void {
         this.lightbox.open([
             {
-                src: this.src,
+                src: this.src!,
                 caption: this.caption,
-                thumb: this.src,
+                thumb: this.src!,
             },
         ]);
     }

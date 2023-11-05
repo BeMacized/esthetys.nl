@@ -15,20 +15,20 @@ export function fadeUp(name = 'fadeUp', length = '.15s ease') {
     animations: [fadeUp('popup')],
 })
 export class CovidOverlayComponent implements OnInit {
-    close: () => void;
+    close?: () => void;
     @HostBinding('@popup') popupAnimation = true;
 
     @HostListener('document:click', ['$event'])
     clickOutside($event: MouseEvent) {
         if ($event.target === this.elementRef.nativeElement) {
             $event.stopImmediatePropagation();
-            this.close();
+            this.close!();
         }
     }
 
     @HostListener('document:keydown.escape', ['$event'])
-    onEscapeDown($event) {
-        this.close();
+    onEscapeDown() {
+        this.close!();
     }
 
     constructor(private elementRef: ElementRef) {}

@@ -1,5 +1,7 @@
 {
   "projects": {
-    "default": "esthetys-f4968"
-  }
+    "prod": "esthetys-f4968"
+  },
+  "targets": {},
+  "etags": {}
 }

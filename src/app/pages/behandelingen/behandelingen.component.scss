@@ -21,7 +21,7 @@
     }
 }
 
-.gezichtsuitbereidingen-row-bg {
+.diepgaande-huidverbeterende-behandelingen-row-bg {
     color: #fff;
     background-color: #000;
 
@@ -30,12 +30,21 @@
     }
 }
 
-.diversen-row-bg {
+.gezichtsuitbereidingen-row-bg {
     color: #000;
 
     .treatment-item {
         color: #fff;
         background-color: #556d08;
+    }
+}
+
+.diversen-row-bg {
+    color: #fff;
+    background-color: #000;
+
+    .treatment-item {
+        background-color: rgba(255, 255, 255, 0.15);
     }
 }
 
@@ -59,8 +68,11 @@
     }
 }
 
+
 .treatment-item {
-    margin: 20px;
+    &, &-placeholder {
+        margin: 20px;
+    }
 }
 
 .treatment-item-img {

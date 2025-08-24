@@ -4,6 +4,7 @@ import { Component, HostBinding, Input, OnChanges, OnInit } from '@angular/core'
     selector: 'est-pagewidth-container',
     templateUrl: './pagewidth-container.component.html',
     styleUrls: ['./pagewidth-container.component.scss'],
+    standalone: false
 })
 export class PagewidthContainerComponent implements OnInit, OnChanges {
     @Input() hGutter = false;

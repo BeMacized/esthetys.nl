@@ -7,6 +7,7 @@ import { NotificationAnimationType } from 'angular2-notifications';
     selector: 'est-root',
     templateUrl: './app.component.html',
     styleUrls: ['./app.component.scss'],
+    standalone: false
 })
 export class AppComponent implements OnInit {
     notificationOptions: Options = {

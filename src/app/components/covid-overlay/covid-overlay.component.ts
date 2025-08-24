@@ -13,6 +13,7 @@ export function fadeUp(name = 'fadeUp', length = '.15s ease') {
     templateUrl: './covid-overlay.component.html',
     styleUrls: ['./covid-overlay.component.scss'],
     animations: [fadeUp('popup')],
+    standalone: false
 })
 export class CovidOverlayComponent implements OnInit {
     close?: () => void;

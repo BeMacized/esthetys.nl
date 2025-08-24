@@ -4,6 +4,7 @@ import { Component, OnInit } from '@angular/core';
     selector: 'est-cadeaubon',
     templateUrl: './cadeaubon.component.html',
     styleUrls: ['./cadeaubon.component.scss'],
+    standalone: false
 })
 export class CadeaubonComponent implements OnInit {
     constructor() {}

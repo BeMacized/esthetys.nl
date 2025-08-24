@@ -6,6 +6,7 @@ import { NotificationsService } from 'angular2-notifications';
     selector: 'est-contact',
     templateUrl: './contact.component.html',
     styleUrls: ['./contact.component.scss'],
+    standalone: false
 })
 export class ContactComponent implements OnInit {
     constructor(

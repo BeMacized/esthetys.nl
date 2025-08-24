@@ -6,6 +6,7 @@ import { Event, NavigationEnd, Router } from '@angular/router';
     selector: 'est-navbar',
     templateUrl: './navbar.component.html',
     styleUrls: ['./navbar.component.scss'],
+    standalone: false
 })
 export class NavbarComponent implements OnInit {
     collapsed = true;

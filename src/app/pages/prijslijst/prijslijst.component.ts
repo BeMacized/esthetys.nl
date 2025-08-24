@@ -6,6 +6,7 @@ import { groupBy } from 'lodash';
     selector: 'est-prijslijst',
     templateUrl: './prijslijst.component.html',
     styleUrls: ['./prijslijst.component.scss'],
+    standalone: false
 })
 export class PrijslijstComponent implements OnInit {
     protected priceData: any;

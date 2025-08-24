@@ -5,6 +5,7 @@ import { Lightbox } from 'ngx-lightbox';
     selector: 'est-lightbox-image',
     templateUrl: './lightbox-image.component.html',
     styleUrls: ['./lightbox-image.component.scss'],
+    standalone: false
 })
 export class LightboxImageComponent implements OnInit {
     @Input() src?: string;

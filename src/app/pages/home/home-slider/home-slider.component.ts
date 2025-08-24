@@ -5,6 +5,7 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
     templateUrl: './home-slider.component.html',
     styleUrls: ['./home-slider.component.scss'],
     encapsulation: ViewEncapsulation.None,
+    standalone: false
 })
 export class HomeSliderComponent implements OnInit {
     constructor() {}

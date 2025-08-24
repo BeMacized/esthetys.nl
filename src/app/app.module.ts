@@ -16,15 +16,14 @@ import { MerkenComponent } from './pages/merken/merken.component';
 import { LightboxImageComponent } from './components/lightbox-image/lightbox-image.component';
 import { HomeComponent } from './pages/home/home.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { HttpClientModule } from '@angular/common/http';
+import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './components/app/app.component';
 import { SimpleNotificationsModule } from 'angular2-notifications';
 import { LightboxModule } from 'ngx-lightbox';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
-@NgModule({
-    declarations: [
+@NgModule({ declarations: [
         AppComponent,
         NavbarComponent,
         PagewidthContainerComponent,
@@ -40,18 +39,12 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
         ContactComponent,
         CovidOverlayComponent,
     ],
-    imports: [
-        BrowserModule,
+    bootstrap: [AppComponent], imports: [BrowserModule,
         AppRoutingModule,
         FormsModule,
         ReactiveFormsModule,
-        HttpClientModule,
         BrowserAnimationsModule,
         LightboxModule,
         SimpleNotificationsModule.forRoot(),
-        NgbModule,
-    ],
-    providers: [],
-    bootstrap: [AppComponent],
-})
+        NgbModule], providers: [provideHttpClient(withInterceptorsFromDi())] })
 export class AppModule {}

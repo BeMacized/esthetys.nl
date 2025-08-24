@@ -65,10 +65,10 @@
                     "builder": "@angular-devkit/build-angular:dev-server",
                     "configurations": {
                         "production": {
-                            "browserTarget": "esthetys-2:build:production"
+                          "buildTarget": "esthetys-2:build:production"
                         },
                         "development": {
-                            "browserTarget": "esthetys-2:build:development"
+                          "buildTarget": "esthetys-2:build:development"
                         }
                     },
                     "defaultConfiguration": "development"
@@ -76,7 +76,7 @@
                 "extract-i18n": {
                     "builder": "@angular-devkit/build-angular:extract-i18n",
                     "options": {
-                        "browserTarget": "esthetys-2:build"
+                      "buildTarget": "esthetys-2:build"
                     }
                 },
                 "test": {
